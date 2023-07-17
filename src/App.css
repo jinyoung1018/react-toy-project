@@ -162,7 +162,7 @@
 
 .Service {
   height: 600px;
-  background-color: white;
+  background-color: rgb(254, 254, 254);
   margin-top: -21px;
 }
 
@@ -221,6 +221,90 @@
     text-align: center;
     
   }
+
+  .ContactForm .inputbox {
+    position: relative;
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 30px;
+   
+  }
+
+  .ContactForm .inputbox input{
+    font-size: 15px;
+  color: #222222;
+  width: 300px;
+  border: none;
+  border-bottom: solid #aaaaaa 1px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+  background: none;
+  z-index: 5;
+   
+  }
+
+  .ContactForm .inputbox input::placeholder { color: #aaaaaa; }
+  .ContactForm .inputbox input:focus { outline: none; }
+
+  .ContactForm .inputbox span{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0%;  /* right로만 바꿔주면 오 - 왼 */
+    background-color: #666;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    transition: 0.5s;
+  }
+
+  .ContactForm .inputbox label{
+    position: absolute;
+    color: #aaa;
+    left: 10px;
+    font-size: 20px;
+    bottom: 8px;
+    transition: all .2s;
+  }
+
+  .ContactForm .inputbox input:focus ~ label, input:valid ~ label {
+    font-size: 16px;
+    bottom: 40px;
+    color: #666;
+    font-weight: bold;
+  }
+
+  .ContactForm .inputbox input:focus ~ span, input:valid ~ span {
+    width: 100%;
+  }
+
+  .ContactForm .btn{
+    position: relative;
+    border: none;
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    background-color: #77af9c;
+    color: #d7fff1;
+    
+  }
+  .ContactForm .btn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+   }
+
+   .ContactForm .btn:active {
+    transform: scale(1.5);
+}
+
 
 .Contact{
   height: 600px;
